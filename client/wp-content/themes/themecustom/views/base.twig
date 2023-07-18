@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Titre par défaut{% endblock %}</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Mettre ici la navigation si elle est commune à toutes les pages -->
+        </nav>
+    </header>
+
+    <main>
+    
+        {% block content %}
+            <!-- Mettre ici le contenu spécifique à chaque page -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Mettre ici le contenu du pied de page (footer) -->
+    </footer>
+
+</body>
+</html>

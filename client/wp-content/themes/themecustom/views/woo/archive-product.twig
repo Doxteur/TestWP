@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    {% if product %}
+        <div class="product-list">
+            <ul>
+                    <li>
+                        <h3>{{ product.name }}</h3>
+                        <p>{{ product.description }}</p>
+                        <p>{{ product.price }} €</p>
+                    </li>
+            </ul>
+        </div>
+    {% else %}
+        <p>Aucun produit trouvé.</p>
+    {% endif %}
+{% endblock %}

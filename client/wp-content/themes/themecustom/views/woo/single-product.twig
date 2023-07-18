@@ -1,0 +1,24 @@
+{# Vérifier si Timber est chargé #}
+{% if function('class_exists', 'Timber') %}
+	{# Récupérer les produits WooCommerce #}
+	{% set args = {
+        'post_type': 'product',
+        'posts_per_page': -1,
+    } %}
+
+	{# {% set products = Timber.get_posts(args) %} #}
+
+	{# Afficher les produits s'ils existent #}
+	{% if products %}
+		<ul>
+			{% for product in products %}
+				<li>{{ product.post_title }}</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>Aucun produit trouvé.</p>
+	{% endif %}
+
+{% else %}
+	<p>Timber n'est pas activé ou configuré correctement.</p>
+{% endif %}

@@ -26,6 +26,6 @@ services:
       - WORDPRESS_DB_PASSWORD=wordpress
       - WORDPRESS_DB_NAME=wordpress
     volumes:
-      - ./client:/var/www/html  # Mount local 'wordpress' folder to container
+      - ./client:/var/www/html
 volumes:
   db_data:
